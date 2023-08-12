@@ -1,0 +1,299 @@
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông,...)
+*/
+
+body{
+  background-color: #9cbbec;
+  color: #005622;
+}
+
+/* Header Section */
+#header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-color: #000;
+  z-index: 1;
+}
+
+/* Nav */
+#nav{
+  display: inline-block;
+}
+
+#nav > li{
+  display: inline-block;
+}
+
+#nav li{
+  position: relative;
+}
+
+#nav > li:first-child .header-icon {
+  display: inline-block;
+}
+
+#nav > li .header-icon,
+#nav .subnav .subnav-icon {
+  top: 0;
+  left: 0;
+  height: 48px;
+  display: none;
+}
+
+#nav > li > a{
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 24px;
+  display: inline-block;
+}
+
+#nav li a{
+  text-decoration: none;
+  line-height: 48px;
+}
+
+#nav li:hover .subnav{
+  display: block;
+}
+
+#nav li:hover{
+  background-color: #ccc;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#nav > li:hover > a{
+  color: #000;
+}
+
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+
+/* Sub nav */
+#nav .subnav{
+  display: none;
+  min-width: 160px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 
+  0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+#nav .subnav li:hover {
+  display: block;
+}
+
+#nav .subnav a{
+  color: #000;
+  padding: 0 16px;
+  line-height: 38px;
+  display: block;
+}
+
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#header .mobile-menu-btn:hover{
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+  color: #000;
+  background-color: #ccc;
+}
+
+#header .search-btn:hover{
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+  float: right;
+  padding: 0 21px;
+}
+
+#header .menu-icon,
+#header .search-icon{
+  color: #fff;
+  font-size: 14px;
+  line-height: 48px;
+}
+
+/* Slider Section */
+#slider{
+  position: relative;
+  margin-top: 48px;
+  padding-top: 50%;
+  background: url('../img/slider/slider_vt.jpg') top center / cover no-repeat;
+  text-transform: uppercase;
+}
+
+#slider .text-content {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  /* padding: 32px 16px; */
+  width: 100%;
+  text-align: center;
+  
+}
+
+#slider .text-support {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-shadow: 0 0 1px #000;
+}
+
+#slider .text-topic {
+  margin: 0;
+  font-size: 3rem;
+  text-shadow: 0 0 2px #000;
+}
+
+#content .content-section{
+  width: 800px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content .section-title{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+#content .section-sub-title{
+  text-align: center;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#content .the-intro-text{
+  text-align: justify;
+}
+
+#content .member-img{
+  width: 60%;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+
+/* Places Section */
+.places-list{
+  margin-bottom: 32px;
+}
+
+.places-list .place-img:hover {
+  opacity: 0.6;
+}
+
+.places-list .place-img{
+  width: 100%;
+  display: block;
+  
+}
+
+.places-list .place-body{
+  background-color: #fff;
+  padding: 16px;
+}
+.places-list .place-heading{
+  margin: 0;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.places-list .place-time{
+  opacity: 0.6;
+}
+
+/* Guide Section*/
+.guide-content{
+  padding-top: 32px;
+  /* padding-bottom: 32px; */
+}
+
+.guide-info{
+  font-size: 18px;
+}
+
+.guide-info p{
+  margin: 4px 0;
+}
+
+.guide-info p:first-child{
+  margin-top: 0;
+}
+
+.guide-info i{
+  display: inline-block;
+  width: 36px;
+}
+
+.form-control{
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Map section */
+#google-map{
+  padding-bottom: 50%;
+  position: relative;
+}
+#google-map iframe{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* filter: grayscale(50%); */
+}
+
+#footer{
+  text-align: center;
+}
+
+.socials-list a{
+  text-decoration: none;
+}
+
+.socials-list a i{
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.socials-list a i,
+#footer .copyright a {
+  color: violet;
+}
+
+.socials-list a i:hover,
+#footer .copyright:hover a {
+  color: pink;
+}
+
+#footer .copyright{
+  margin: 16px 0;
+}
+
