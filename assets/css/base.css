@@ -52,9 +52,20 @@ p{
   margin-bottom: 16px;
 }
 
-
 ul {
   list-style: none !important;
+}
+
+.weight-light{
+  font-weight: lighter;
+}
+
+.weight-bold{
+  font-weight: bold;
+}
+
+.block{
+  display: block;
 }
 
 .upper{
@@ -83,6 +94,18 @@ ul {
 
 .text-center{
   text-align: center !important;
+}
+
+.p-8{
+  padding: 8px !important;
+}
+
+.pt-64{
+  padding-top: 64px !important;
+}
+
+.pb-8{
+  padding-bottom: 8px !important;
 }
 
 .p-64-16{
@@ -147,10 +170,7 @@ ul {
   cursor: pointer;
 }
 
-.row{
-  margin-left: -8px;
-  margin-right: -8px;
-}
+
 
 .row::after{
   content: "";
@@ -161,7 +181,6 @@ ul {
 .col{
   padding-left: 8px;
   padding-right: 8px;
-  
 }
 
 .col-1{

@@ -23,7 +23,7 @@ body{
   left: 0;
   right: 0;
   height: 48px;
-  background-color: #000;
+  background-color: rgba(156, 187, 236, 0.6);
   z-index: 1;
 }
 
@@ -40,18 +40,6 @@ body{
   position: relative;
 }
 
-#nav > li:first-child .header-icon {
-  display: inline-block;
-}
-
-#nav > li .header-icon,
-#nav .subnav .subnav-icon {
-  top: 0;
-  left: 0;
-  height: 48px;
-  display: none;
-}
-
 #nav > li > a{
   color: #fff;
   text-transform: uppercase;
@@ -64,6 +52,7 @@ body{
   line-height: 48px;
 }
 
+/* Sub nav */
 #nav li:hover .subnav{
   display: block;
 }
@@ -82,14 +71,13 @@ body{
   font-size: 14px;
 }
 
-/* Sub nav */
 #nav .subnav{
   display: none;
   min-width: 160px;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: rgb(182, 216, 193);
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 
   0 4px 20px 0 rgb(0 0 0 / 19%);
 }
@@ -106,9 +94,6 @@ body{
 }
 
 #header .mobile-menu-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: none;
 }
 
@@ -122,13 +107,16 @@ body{
 }
 
 #header .search-btn:hover{
-  background-color: #f44336;
+  background-color: #5884ca;
   cursor: pointer;
 }
 
 #header .mobile-menu-btn,
 #header .search-btn{
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* float: right; */
   padding: 0 21px;
 }
 
@@ -142,7 +130,7 @@ body{
 /* Slider Section */
 #slider{
   position: relative;
-  margin-top: 48px;
+  /* margin-top: 48px; */
   padding-top: 50%;
   background: url('../img/slider/slider_vt.jpg') top center / cover no-repeat;
   text-transform: uppercase;
@@ -171,6 +159,7 @@ body{
   text-shadow: 0 0 2px #000;
 }
 
+/* Intro Section */
 #content .content-section{
   width: 800px;
   max-width: 100%;
@@ -180,7 +169,6 @@ body{
 
 #content .section-title{
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 4px;
 }
 
@@ -194,11 +182,38 @@ body{
   text-align: justify;
 }
 
-#content .member-img{
-  width: 60%;
+/* Big4 Section */
+#content .attraction-img{
+  display: block;
+  width: 100%;
   border-radius: 4px;
-  background-color: #000;
+  /* background-color: #000; */
 }
+
+.info-card-box{
+  height: 100%;
+  /* overflow: hidden; */
+  position: relative;
+  display: flex;
+}
+
+.info-card-box .overlay{
+  position: absolute;
+  height: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s ease;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+}
+
+.info-card-box:hover .overlay{
+  height: 25%;
+}
+
 
 
 /* Places Section */
@@ -285,12 +300,12 @@ body{
 
 .socials-list a i,
 #footer .copyright a {
-  color: violet;
+  color: #5884ca;
 }
 
 .socials-list a i:hover,
 #footer .copyright:hover a {
-  color: pink;
+  color: cyan;
 }
 
 #footer .copyright{
